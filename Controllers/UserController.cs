@@ -7,7 +7,6 @@ using webapi.Models;
 
 namespace Controllers;
 
-[ServiceFilter(typeof(AuthenticationFiltering))]
 [ApiController]
 [Route("[controller]")]
 public class UserController : ControllerBase
@@ -20,6 +19,7 @@ public class UserController : ControllerBase
     _dbContext = dbContext;
   }
 
+  [ServiceFilter(typeof(AuthenticationFiltering))]
   [HttpGet]
   public async Task<ActionResult<IEnumerable<UserModel>>> GetAllUsers()
   {
@@ -31,6 +31,7 @@ public class UserController : ControllerBase
     return await Task.FromResult(_dbContext.User.ToList());
   }
 
+  [ServiceFilter(typeof(AuthenticationFiltering))]
   [HttpGet("{id}")]
   public async Task<ActionResult<UserModel>> GetUser(String id)
   {
@@ -58,6 +59,7 @@ public class UserController : ControllerBase
     }
   }
 
+  [ServiceFilter(typeof(AuthenticationFiltering))]
   [HttpPut("{id}")]
   public async Task<IActionResult> EditUser(string id, UserModel user)
   {
@@ -88,6 +90,7 @@ public class UserController : ControllerBase
 
   }
 
+  [ServiceFilter(typeof(AuthenticationFiltering))]
   [HttpDelete("{id}")]
   public async Task<IActionResult> DeleteUser(string id)
   {
