@@ -5,7 +5,7 @@
 namespace webapi.Migrations
 {
     /// <inheritdoc />
-    public partial class Firstmigration : Migration
+    public partial class FirstMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,7 +19,8 @@ namespace webapi.Migrations
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Postition = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Postition = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PasswordReset = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

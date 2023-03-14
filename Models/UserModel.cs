@@ -16,4 +16,6 @@ public class UserModel
   public string? Password { get; set; }
   [Required(ErrorMessage = "Position is required")]
   public string? Postition { get; set; }
+  [Required(ErrorMessage = "Password reset is required")]
+  public string? PasswordReset { get; set; }
 }

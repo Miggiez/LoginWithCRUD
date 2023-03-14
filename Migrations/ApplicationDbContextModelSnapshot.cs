@@ -42,6 +42,10 @@ namespace webapi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PasswordReset")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Postition")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

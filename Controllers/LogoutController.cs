@@ -20,5 +20,4 @@ public class LogoutController : ControllerBase
     return StatusCode(200, new { message = "Logout Successfully" });
   }
 
-
 }
