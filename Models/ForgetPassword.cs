@@ -4,7 +4,7 @@ namespace Models;
 
 public class ForgetPassword
 {
-  [Required(ErrorMessage = "Emaill is required")]
+  [Required(ErrorMessage = "Email is required")]
   public string? Email { get; set; }
   [Required(ErrorMessage = "PetName is required")]
   public string? PetName { get; set; }
